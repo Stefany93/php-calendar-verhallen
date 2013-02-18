@@ -7,7 +7,7 @@
 			Enjoy!
 		*/
 // $year, and $month are the most important variables.
-// They have conditional values, i.e. if their respective valyes are not set in the URL 
+// They have conditional values, i.e. if their respective values are not set in the URL 
 // as a query string, their default value is the current year and month.
 	$year = (isset($_GET['year'])) ? filter_input(INPUT_GET, 'year', FILTER_SANITIZE_NUMBER_INT) : date('Y');
 	$month = (isset($_GET['month'])) ? filter_input(INPUT_GET, 'month', FILTER_SANITIZE_NUMBER_INT) : date('m');
