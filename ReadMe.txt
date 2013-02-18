@@ -1,0 +1,3 @@
+This is like a super simple PHP calendar named Verhallen.
+It has absolutely no special effects and stuff. Just Forward/Back buttons and that's it.
+I am starting to think that it's almost useless. Anyways...
