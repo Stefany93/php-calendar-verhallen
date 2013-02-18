@@ -128,6 +128,6 @@
 		?>
 			</tr>
 		</table>
-		<a href="test.php?month=<?php echo $increment_month; ?>&year=<?php echo $increment_year; ?>"> Forward </a>
+		<a href="calendar.php?month=<?php echo $increment_month; ?>&year=<?php echo $increment_year; ?>"> Forward </a>
 		<br />
-		<a href="test.php?month=<?php echo $decrease_month; ?>&year=<?php echo $decrease_year; ?>"> Back </a>
+		<a href="calendar.php?month=<?php echo $decrease_month; ?>&year=<?php echo $decrease_year; ?>"> Back </a>
