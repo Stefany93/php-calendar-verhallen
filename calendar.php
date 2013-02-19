@@ -9,8 +9,8 @@
 // $year, and $month are the most important variables.
 // They have conditional values, i.e. if their respective values are not set in the URL 
 // as a query string, their default value is the current year and month.
-	$year = (isset($_GET['year'])) ? filter_input(INPUT_GET, 'year', FILTER_SANITIZE_NUMBER_INT) : date('Y');
-	$month = (isset($_GET['month'])) ? filter_input(INPUT_GET, 'month', FILTER_SANITIZE_NUMBER_INT) : date('m');
+	$year = filter_input(INPUT_GET, 'year', FILTER_SANITIZE_NUMBER_INT) or $year = date('Y');
+	$month = filter_input(INPUT_GET, 'month', FILTER_SANITIZE_NUMBER_INT) or $month = date('m');
 // $days_in_month calculates stores the number of the days in each month
 // cal_day_in_month function's last two arguments are the variables declared above.
 	$days_in_month = cal_days_in_month(CAL_GREGORIAN, $month, $year);
@@ -68,14 +68,14 @@
 			</tr>
 			<tr>
 			<?php
-// Here we take the $blank variables we declared earlier
-//  and processed in the switch statemen.
+// Here we take the $blank variable we declared earlier
+//  and processed in the switch statement.
 // The first while loop has the sole purpose
 // of putting "<td>" elements i.e. empty space
 // before outputting the first day of the month.
 // the while loop will ONLY put empty space if
 // the the $blank variable is more than 0
-// i.e. the first day of the month is not monday.
+// i.e. the first day of the month is not Monday.
 // In each looping of the loop, we take 1 from the $blank variable
 // and we add 1 to the $tr one, so it could insert "<tr>" elements
 // when the week starts and thus make the calendar look like one...
